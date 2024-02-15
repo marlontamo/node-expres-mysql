@@ -1,0 +1,39 @@
+# Setting Up the Project
+
+## Environment Variables
+
+1. Create a `.env` File:
+   - Open your text editor and create a new file named `.env` in the root directory of your project.
+
+2. Add Environment Variables:
+   - Inside the `.env` file, add the following lines with your MySQL database connection details:
+     ```
+     MYSQL_HOST='***.*.*.*'
+     MYSQL_USER='****'
+     MYSQL_PASSWORD='*******'
+     MYSQL_DATABASE='*****'
+     ```
+   - Replace the placeholders (`***.*.*.*`, `****`, `*******`, `*****`) with your actual MySQL database host, username, password, and database name respectively.
+
+## Creating the Database in phpMyAdmin
+
+1. Access phpMyAdmin:
+   - Open your web browser and navigate to phpMyAdmin by entering the appropriate URL (e.g., `http://localhost/phpmyadmin`).
+
+2. Log in:
+   - Log in to phpMyAdmin using your credentials.
+
+3. Create a New Database:
+   - Once logged in, locate the option to create a new database. This is usually found in the sidebar or as a button labeled "New" or "Create new database."
+   - Enter a name for your database (e.g., `notes_db`) in the provided field.
+
+4. Define Table Structure:
+   - After creating the database, navigate to it by selecting it from the list of databases.
+   - Look for an option to create a new table. This is usually labeled "New" or "Create new table."
+   - Define the table structure with the following columns:
+     - `id`: An integer primary key with auto-increment.
+     - `title`: A text field to store the title of the note.
+     - `contents`: A text field to store the contents of the note.
+
+5. Save Changes:
+   - After defining the table structure and specifying the column details, save the changes. This usually involves clicking a button labeled "Save" or "Create" at the bottom of the page.
