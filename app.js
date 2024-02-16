@@ -1,8 +1,9 @@
 import express from 'express'
 import { getNotes, getNote, createNote, updateNote , deleteNote} from './database.js'
-
+import cors from 'cors';
 const app = express()
 
+app.use(cors());
 app.use(express.json())
 //get all notes
 app.get("/notes", async (req, res) => {
@@ -19,7 +20,7 @@ app.get("/notes/:id", async (req, res) => {
 app.post("/notes", async (req, res) => {
   const { title, contents } = req.body
   const note = await createNote(title, contents)
-  res.status(201).send(note)
+  res.status(200).send(note)
 })
 //update note
 app.put("/notes/:id", async (req, res) => {
